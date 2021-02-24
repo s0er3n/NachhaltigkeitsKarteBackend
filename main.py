@@ -6,17 +6,16 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 db = TinyDB('db.json')
 app = FastAPI()
-origins = [
-  "*",
-  "https://nachhaltigkeitskarte.netlify.app",
-]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=False,
+    # allow_origins=origins,
+    allow_origin_regex='https?://.*',
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 class Location(BaseModel):
     name: str
     website: str
