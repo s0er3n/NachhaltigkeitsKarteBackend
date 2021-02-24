@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 db = TinyDB('db.json')
 app = FastAPI()
 origins = [
+  "*",
   "https://nachhaltigkeitskarte.netlify.app",
 ]
 app.add_middleware(
