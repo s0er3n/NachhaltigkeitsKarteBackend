@@ -5,16 +5,18 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from starlette.middleware.cors import CORSMiddleware
 db = TinyDB('db.json')
-app = FastAPI()
 
-app.add_middleware(
+
+middleware= [Middleware(
     CORSMiddleware,
     # allow_origins=origins,
     allow_origins = ["https://nachhaltigkeitskarte.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
-)
+    allow_headers=["*"],)
+]
+
+app = FastAPI(middleware=middleware)
 
 class Location(BaseModel):
     name: str
