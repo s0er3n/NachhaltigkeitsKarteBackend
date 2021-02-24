@@ -12,7 +12,7 @@ app.add_middleware(
     # allow_origins=origins,
     allow_origins = ["https://nachhaltigkeitskarte.netlify.app"],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
