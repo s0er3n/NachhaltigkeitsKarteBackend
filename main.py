@@ -8,6 +8,7 @@ from starlette.middleware.cors import CORSMiddleware
 db = TinyDB('db.json')
 
 
+
 middleware= [Middleware(
     CORSMiddleware,
     # allow_origins=origins,
