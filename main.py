@@ -12,7 +12,7 @@ app.add_middleware(
     # allow_origins=origins,
     allow_origin_regex='https?://.*',
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
