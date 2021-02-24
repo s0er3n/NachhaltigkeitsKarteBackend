@@ -10,7 +10,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     # allow_origins=origins,
-    allow_origins = ["https://nachhaltigkeitskarte.netlify.app","https://nachhaltigkeitskarte.netlify.app/addLocation"],
+    allow_origins = ["https://nachhaltigkeitskarte.netlify.app"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
