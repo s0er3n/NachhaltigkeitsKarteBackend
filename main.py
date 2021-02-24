@@ -3,6 +3,7 @@ from typing import Optional
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
+from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 db = TinyDB('db.json')
 
